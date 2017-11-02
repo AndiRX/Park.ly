@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B0F4EF91FABCED300D1EE14 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0F4EF81FABCED300D1EE14 /* LocationService.swift */; };
 		4BC5DD2D1FAB6BE100572CEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC5DD2C1FAB6BE100572CEF /* AppDelegate.swift */; };
 		4BC5DD2F1FAB6BE100572CEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC5DD2E1FAB6BE100572CEF /* ViewController.swift */; };
 		4BC5DD321FAB6BE100572CEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BC5DD301FAB6BE100572CEF /* Main.storyboard */; };
 		4BC5DD341FAB6BE100572CEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BC5DD331FAB6BE100572CEF /* Assets.xcassets */; };
 		4BC5DD371FAB6BE100572CEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BC5DD351FAB6BE100572CEF /* LaunchScreen.storyboard */; };
 		4BC5DD421FAB750500572CEF /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC5DD411FAB750500572CEF /* RoundButton.swift */; };
+		4BC5DD441FAB8A1100572CEF /* UIImageViewShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC5DD431FAB8A1100572CEF /* UIImageViewShadow.swift */; };
+		4BC5DD461FAB8AD200572CEF /* ParkingSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC5DD451FAB8AD200572CEF /* ParkingSpot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B0F4EF81FABCED300D1EE14 /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		4BC5DD291FAB6BE100572CEF /* Park.ly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Park.ly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BC5DD2C1FAB6BE100572CEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BC5DD2E1FAB6BE100572CEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		4BC5DD361FAB6BE100572CEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BC5DD381FAB6BE100572CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BC5DD411FAB750500572CEF /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		4BC5DD431FAB8A1100572CEF /* UIImageViewShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewShadow.swift; sourceTree = "<group>"; };
+		4BC5DD451FAB8AD200572CEF /* ParkingSpot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingSpot.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B0F4EF71FABCEBD00D1EE14 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4B0F4EF81FABCED300D1EE14 /* LocationService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		4BC5DD201FAB6BE100572CEF = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +70,7 @@
 		4BC5DD2B1FAB6BE100572CEF /* Park.ly */ = {
 			isa = PBXGroup;
 			children = (
+				4B0F4EF71FABCEBD00D1EE14 /* Services */,
 				4BC5DD401FAB748E00572CEF /* Controller */,
 				4BC5DD3F1FAB748800572CEF /* View */,
 				4BC5DD3E1FAB748000572CEF /* Model */,
@@ -72,6 +87,7 @@
 		4BC5DD3E1FAB748000572CEF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4BC5DD451FAB8AD200572CEF /* ParkingSpot.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -80,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				4BC5DD411FAB750500572CEF /* RoundButton.swift */,
+				4BC5DD431FAB8A1100572CEF /* UIImageViewShadow.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -163,8 +180,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BC5DD441FAB8A1100572CEF /* UIImageViewShadow.swift in Sources */,
 				4BC5DD421FAB750500572CEF /* RoundButton.swift in Sources */,
 				4BC5DD2F1FAB6BE100572CEF /* ViewController.swift in Sources */,
+				4BC5DD461FAB8AD200572CEF /* ParkingSpot.swift in Sources */,
+				4B0F4EF91FABCED300D1EE14 /* LocationService.swift in Sources */,
 				4BC5DD2D1FAB6BE100572CEF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,6 +349,7 @@
 				4BC5DD3D1FAB6BE100572CEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

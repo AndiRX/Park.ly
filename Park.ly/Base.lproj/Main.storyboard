@@ -33,8 +33,11 @@
                                     <constraint firstAttribute="width" constant="75" id="PfF-fD-aoO"/>
                                 </constraints>
                                 <state key="normal" image="parkCar"/>
+                                <connections>
+                                    <action selector="parkBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vgK-HN-vd1"/>
+                                </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="park.ly-logo" translatesAutoresizingMaskIntoConstraints="NO" id="XgN-v2-2tv">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="park.ly-logo" translatesAutoresizingMaskIntoConstraints="NO" id="XgN-v2-2tv" customClass="UIImageViewShadow" customModule="Park_ly" customModuleProvider="target">
                                 <rect key="frame" x="16" y="20" width="343" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="bRy-Gf-LQD"/>
@@ -54,6 +57,10 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iKY-Ls-2gC" secondAttribute="bottom" id="t7O-TI-NrC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="iKY-Ls-2gC" id="uEA-HU-vPC"/>
+                        <outlet property="parkBtn" destination="gLG-Ft-gOA" id="RSE-Md-JD7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
