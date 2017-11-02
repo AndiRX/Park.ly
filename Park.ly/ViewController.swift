@@ -27,7 +27,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
    
     }
     
-    func checkLocationAuthorizationStatus() {
+   // func checkLocationAuthorizationStatus() {
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
             mapView.showsUserLocation = true
             LocationService.instance.locationManager.delegate = self
