@@ -25,7 +25,14 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     }
 
     @IBAction func parkBtnWasPressed(_ sender: Any) {
-   
+        if mapView.annotations.count == 1 {
+            mapView.addAnnotation(parkedCarAnnotation!)
+            parkBtn.setImage(UIImage(named: "foundCar.png"), for: .normal)
+        } else {
+            mapView.removeAnnotations(mapView.annotations)
+            parkBtn.setImage(UIImage(named: "parkCar.png"), for: .normal)
+        }
+        centerMapOnLocation(location: LocationService.instance.locationManager.location!)
     }
     
     func checkLocationAuthorizationStatus() {
@@ -40,6 +47,9 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         }
     }
     
+}
+
+extension ViewController {
     func centerMapOnLocation(location: CLLocation) {
         
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 2, regionRadius * 2)
@@ -63,6 +73,19 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             return nil
         }
     }
+        
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        let location = view.annotation as! ParkingSpot
+        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking]
+        location.mapItem(location: (parkedCarAnnotation?.coordinate)!).openInMaps(launchOptions: launchOptions)
+        
+    }
     
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        centerMapOnLocation(location: CLLocation(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude))
+        
+        let locationServiceCoordinate = LocationService.instance.locationManager.location!.coordinate
+        
+        parkedCarAnnotation = ParkingSpot(title: "My Parking Spot", locationName: "Tap the 'i' for GPS", coordinate: CLLocationCoordinate2D(latitude: locationServiceCoordinate.latitude, longitude: locationServiceCoordinate.longitude))
 }
-
+}
