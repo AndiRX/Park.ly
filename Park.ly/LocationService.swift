@@ -23,7 +23,6 @@ class LocationService: NSObject, CLLocationManagerDelegate {
         self.locationManager.startUpdatingLocation()
         
     }
-
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         self.currentLocation = locationManager.location?.coordinate    }
